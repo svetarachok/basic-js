@@ -29,15 +29,12 @@ function getDNSStats(domains) {
 domains.forEach(item => {matrix.push(item.split('.').reverse())})
 
 for (let i=0; i < matrix.length; i++) {
-  // console.log(i)
   let first = `.${matrix[i][0]}`
-    console.log(`${first}`);
     if(matrix[i][0]) {
       (!obj[`${first}`]) ? obj[`${first}`] = 1 : obj[`${first}`] += 1;
     }
 
     let second = `.${matrix[i][1]}`;
-    console.log(`${first}${second}`)
     if (matrix[i][1]) {
       (!obj[`${first}${second}`]) ? obj[`${first}${second}`] = 1 : obj[`${first}${second}`] +=1
     }
